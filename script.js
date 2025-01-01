@@ -19,18 +19,29 @@ class Person {
 }
 
 class Student extends Person {
-	
-	
-	function study() {
+	study() {
 		console.log(`${this.name} is studying`)
 	}
 }
 
 class Teacher extends Person {
-	function teach() {
+	teach() {
 		console.log(`${this.name} is teaching`)
 	}
 }
+
+// Example Usage
+const student = new Student("Alice", 20);
+console.log(student.name); // Alice
+student.study(); // Alice is studying
+
+const teacher = new Teacher("Bob", 35);
+console.log(teacher.name); // Bob
+teacher.teach(); // Bob is teaching
+
+// Using the age setter
+student.age = 21;
+console.log(student._age); // 21
 
 // Do not change the code below this line
 window.Person = Person;
